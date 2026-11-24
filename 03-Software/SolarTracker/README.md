@@ -24,13 +24,3 @@ Replace example coordinates with the installation site. Internet is needed for w
 - `Tracker.scan`: bounded virtual search, **no actuation**
 - `Tracker.step`: modes and target angles, **no USB commands**
 
-## Before physical use
-1. Confirm one or two ESP32 boards and serial port assignments.
-2. Confirm both axis encoders, absolute homing references, gear ratios and travel/cable limits.
-3. Identify photodiode amplifier/ADC, channel count, saturation and sample timing.
-4. Implement hardware sensor reads, motion completion acknowledgements and bounded search as a separate integration layer. A single unshaded photodiode requires a real scan; a quadrant sensor can use differential error signals if properly optically configured.
-5. Add independent emergency stop, beam shutter/cover, watchdog, overtemperature and wind interlocks. Never run unverified software with an exposed concentrating lens.
-6. Replace simulated 'ideal' light normalization with experimentally established reference measurements; forecast DNI is not a direct local measurement.
-7. Verify weather API field availability, licensing and timestamp freshness for the deployment.
-
-This is a development prototype, not production or safety-certified tracking software.
